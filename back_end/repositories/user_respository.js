@@ -4,28 +4,24 @@ class UserRepository {
     constructor(model) {
         this.model = model;
     }
-    create (object){
-        if (!this.model.findOne({user_name: object.user_name})){
-            const newUser = {
-                user_name: object.user_name,
-                password: object.password,
-            };
-            const user = new this.model(newUser);
+    create(object){
+        const newUser = {
+            email: object.email,
+            password: object.password,
+        };
+        const user = new this.model(newUser);
 
-            return user.save();
-        }
+        return user.save();
     }
     signIn(object){
-        this.model.findOne({
-            user_name: object.user_name,
+        return this.model.findOne({
+            email: object.email,
             password: object.password
-        },function (err, user){
-            return user
         })
     }
     updateById(id, object) {
         const query = { _id: id };
-        return this.model.findOneAndUpdate(query, { $set: { name: object.name, email: object.email, password: object.password } });
+        return this.model.findOneAndUpdate(query, { $set: { name: object.name, password: object.password } });
     }
 }
 module.exports = new UserRepository(User)

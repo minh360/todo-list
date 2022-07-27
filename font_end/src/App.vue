@@ -12,8 +12,7 @@ import FooterPanel from "@/components/Layouts/FooterPanel";
 </script>
 
 <style lang="scss">
-#app{
-  background-image: url('../public/back_ground.jpg');
-  background-size: 100% 100vh;
+.clickable{
+  cursor: pointer;
 }
 </style>

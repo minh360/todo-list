@@ -1,19 +1,17 @@
 <template>
   <section class="header-wrapper">
-    <div class="name" @click="router.push('/')">TODO</div>
+    <slot name="name" />
     <div class="account-wrapper">
-      <div>Sign Up</div>
-      <button>Start For Free</button>
+      <slot />
     </div>
   </section>
 </template>
 
 <script setup>
-import {useRouter} from "vue-router";
-const router = useRouter();
+
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .header-wrapper{
   display: flex;
   align-items: center;
@@ -32,7 +30,7 @@ const router = useRouter();
     gap: 20px;
     align-items: baseline;
     button{
-      height: 25px;
+      height: 25px ;
       border-radius: 10px;
       background-color: bisque;
       color: darkred;

@@ -32,4 +32,26 @@ router.put('/todo/:id', (req, res) => {
         .catch((error) => console.log(error));
 });
 
+router.post('/user/sign_up', (req, res) => {
+    const newUser = req.body;
+    user_repository.create(newUser)
+        .then(res.status(200).json([]))
+        .catch((error) => console.log(error));
+});
+
+router.post('/user/sign_in', (req, res) => {
+    const user = req.body;
+    user_repository.signIn(user).then((user) => {
+        res.json(user);
+    }).catch((error) => console.log(error));
+});
+
+router.put('/user/:id', (req, res) => {
+    const { id } = req.params;
+    const user = { name: req.body.name, password: req.body.password };
+    user_repository.updateById(id, user)
+        .then(res.status(200).json([]))
+        .catch((error) => console.log(error));
+});
+
 module.exports = router

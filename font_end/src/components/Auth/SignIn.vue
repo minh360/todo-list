@@ -1,11 +1,8 @@
 <template>
-
+  <div></div>
 </template>
 
-<script>
-export default {
-  name: "SignIn"
-}
+<script setup>
 </script>
 
 <style scoped>

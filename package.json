@@ -5,7 +5,7 @@
   "main": "back_end/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "nodemon back_end/index.js"
+    "start": "nodemon back_end/index.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/minh360/todo-list#readme",
   "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
     "express": "^4.18.1",
     "mongoose": "^6.5.0"
   }
