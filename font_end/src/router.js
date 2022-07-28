@@ -1,20 +1,21 @@
-import HelloWorld from './components/HelloWorld'
 import HomePage from './components/Pages/HomePage'
 import SignUp from './components/Auth/SignUp'
+import SignIn from './components/Auth/SignIn'
 import {createRouter, createWebHashHistory} from "vue-router/dist/vue-router";
 
 const routes = [
     {
-        path: '/app',
-        component: HelloWorld
-    },
-    {
         path: '/',
+        name: 'home',
         component: HomePage
     },
     {
-        path: '/sign_up',
+        path: '/sign-up',
         component: SignUp
+    },
+    {
+        path: '/sign-in',
+        component: SignIn
     },
 ]
 const router = createRouter({

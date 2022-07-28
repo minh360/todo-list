@@ -9,24 +9,22 @@ class TodoRepository {
             title: object.title,
             describe: object.describe,
             done: false,
-            time: Date.now()
+            time: object.time,
+            id_user: object.id_user
         };
         const todo = new this.model(newTodo);
 
         return todo.save();
     }
-    findAll(){
-        return this.model.find();
-    }
-    findById(id){
-        return this.model.findById(id);
+    findByIdUser(id){
+        return this.model.find({id_user: id});
     }
     deleteById(id) {
         return this.model.findByIdAndDelete(id);
     }
     updateById(id, object) {
         const query = { _id: id };
-        return this.model.findOneAndUpdate(query, { $set: { title: object.title, describe: object.describe, done: object.done } });
+        return this.model.findOneAndUpdate(query, { $set: { title: object.title, describe: object.describe, done: object.done ,time: object.time} });
     }
 }
 module.exports = new TodoRepository(Todo)

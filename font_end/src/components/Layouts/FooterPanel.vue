@@ -13,8 +13,6 @@
   background: black;
   color: white;
   display: flex;
-  position: absolute;
-  bottom: 0;
   height: 90px;
   justify-content: center;
   align-items: center;

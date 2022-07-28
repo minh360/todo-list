@@ -12,6 +12,9 @@ import FooterPanel from "@/components/Layouts/FooterPanel";
 </script>
 
 <style lang="scss">
+#app{
+  font-family: 'Arial',sans-serif !important;
+}
 .clickable{
   cursor: pointer;
 }

@@ -18,11 +18,14 @@
   background-color: firebrick;
   justify-content: space-between;
   padding: 0 25px;
+  position: sticky;
+  top: 0;
   height: 50px;
   font-weight: 700;
   .name{
     color: white;
     font-size: 25px;
+    flex: 1;
   }
   .account-wrapper{
     display: flex;

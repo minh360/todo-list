@@ -3,7 +3,8 @@ const { Schema } = mongoose;
 const todoSchema = new Schema({
     title: String,
     describe: String,
-    time: { type: Date, default: Date.now() },
-    done: { type: Boolean, default: false}
+    time: Date,
+    done: { type: Boolean, default: false},
+    id_user: String
 });
 module.exports = mongoose.model('todos', todoSchema);
