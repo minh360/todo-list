@@ -12,6 +12,8 @@
     <input type="password" v-model="password" @focusout="checkError"/>
     <div>{{message}}</div>
     <button @click="addNewUser" class="clickable">Sign up with Email</button>
+    <hr style="width: 100%"/>
+    <div>Already signed up? <span style="text-decoration: underline" class="clickable" @click="router.push('/sign-in')">Go to login</span></div>
   </SignPanel>
 
 </template>
