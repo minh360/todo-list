@@ -83,7 +83,7 @@ onActivated(()=>{
   justify-content: center;
   height: 100vh;
   color: linen;
-  background-image: url('../../assets/back_ground.jpg');
+  background-image: url('../assets/back_ground.jpg');
   background-size: 100% 100vh;
   padding: 0 25px;
   .btn-signup{

@@ -1,4 +1,4 @@
-import HomePage from './components/Pages/HomePage'
+import HomePage from './Pages/HomePage'
 import SignUp from './components/Auth/SignUp'
 import SignIn from './components/Auth/SignIn'
 import {createRouter, createWebHashHistory} from "vue-router/dist/vue-router";
